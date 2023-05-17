@@ -1,25 +1,22 @@
 // Flutter Packages
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-
 // Dart Packages
 import 'dart:async';
 
 // Firebase Packages
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
+// Functions
+import 'functions/separator_builder.dart';
 // Data Models
 import 'models/view_type.dart';
 import 'models/wrap_options.dart';
-
 // Widgets
 import 'widgets/defaults/bottom_loader.dart';
 import 'widgets/defaults/empty_screen.dart';
 import 'widgets/defaults/initial_loader.dart';
 import 'widgets/views/build_pagination.dart';
-
-// Functions
-import 'functions/separator_builder.dart';
 
 /// A [StreamBuilder] that automatically loads more data when the user scrolls
 /// to the bottom.
@@ -41,9 +38,9 @@ class FirestorePagination extends StatefulWidget {
   ///
   /// Data can be represented in a [ListView], [GridView] or scollable [Wrap].
   const FirestorePagination({
-    super.key,
     required this.query,
     required this.itemBuilder,
+    super.key,
     this.separatorBuilder,
     this.limit = 10,
     this.viewType = ViewType.list,

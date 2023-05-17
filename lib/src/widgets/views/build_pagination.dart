@@ -1,9 +1,8 @@
 // Flutter Packages
-import 'package:flutter/material.dart';
-
 // Data Models
 import 'package:firebase_pagination/src/models/view_type.dart';
 import 'package:firebase_pagination/src/models/wrap_options.dart';
+import 'package:flutter/material.dart';
 
 /// A [ScrollView] to use for the provided [items].
 ///
@@ -15,7 +14,6 @@ class BuildPagination<T> extends StatelessWidget {
   ///
   /// The [viewType] determines the type of [ScrollView] to use.
   const BuildPagination({
-    super.key,
     required this.items,
     required this.itemBuilder,
     required this.separatorBuilder,
@@ -28,6 +26,7 @@ class BuildPagination<T> extends StatelessWidget {
     required this.reverse,
     required this.controller,
     required this.shrinkWrap,
+    super.key,
     this.physics,
     this.padding,
   });
